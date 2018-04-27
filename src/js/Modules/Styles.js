@@ -327,7 +327,7 @@ export default
     Chances: 3,
     Style: 'Belgian Dark Strong Ale',
     Example: 'Chimay Grande Réserve',
-    ImageClass: 'belgian-dark-strong-alebelgian-dark-strong-ale',
+    ImageClass: 'belgian-dark-strong-ale',
     Odds: 1.09
   },
   {
