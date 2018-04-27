@@ -152,7 +152,6 @@ export default
     Style: 'Altbier',
     Example: 'Schumacher Alt',
     ImageClass: 'altbier',
-    Image: 'images/altbier.jpg',
     Odds: 1.46
   },
   {
@@ -356,7 +355,6 @@ export default
     Style: 'Strong Bitter',
     Example: 'Bass Ale',
     ImageClass: 'strong-bitter',
-    Image: 'images/strong-bitter.jpg',
     Odds: 0.73
   },
   {
@@ -370,7 +368,7 @@ export default
     Chances: 2,
     Style: 'International Pale Lager',
     Example: 'Corona Extra',
-    ImageClass: 'british-brown-ale',
+    ImageClass: 'international-pale-lager',
     Odds: 0.73
   },
   {
