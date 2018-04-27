@@ -80,7 +80,7 @@ export default
   {
     Chances: 6,
     Style: 'Scottish Ligh',
-    Example: 'McEwan\'s 60',
+    Example: 'McEwan’s 60/-',
     ImageClass: 'scottish-light',
     Odds: 2.19
   },
@@ -115,7 +115,7 @@ export default
   {
     Chances: 5,
     Style: 'Best Bitter',
-    Example: 'Fuller\'s London Pride',
+    Example: 'Fuller’s London Pride',
     ImageClass: 'best-bitter',
     Odds: 1.82
   },
@@ -136,7 +136,7 @@ export default
   {
     Chances: 5,
     Style: 'Scottish Heavy',
-    Example: 'Caledonia Smooth',
+    Example: 'McEwan’s 70/-',
     ImageClass: 'scottish-heavy',
     Odds: 1.82
   },
