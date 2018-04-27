@@ -227,7 +227,7 @@ export default
   {
     Chances: 3,
     Style: 'Imperial Stout',
-    Example: 'Samuel Smith Imperial Stout',
+    Example: 'Sierra Nevada Narwhal Imperial Stout',
     ImageClass: 'imperial-stout',
     Odds: 1.09
   },
@@ -325,7 +325,7 @@ export default
   {
     Chances: 3,
     Style: 'Belgian Dark Strong Ale',
-    Example: 'Chimay Grande Réserve',
+    Example: 'Achel Extra Brune',
     ImageClass: 'belgian-dark-strong-ale',
     Odds: 1.09
   },
@@ -381,7 +381,7 @@ export default
   {
     Chances: 2,
     Style: 'Gueuze',
-    Example: 'Boon Oude Gueuze',
+    Example: 'Cantillon Gueuze',
     ImageClass: 'gueuze',
     Odds: 0.73
   },
@@ -444,7 +444,7 @@ export default
   {
     Chances: 2,
     Style: 'Bière de Garde',
-    Example: 'Ch’Ti',
+    Example: 'Russian River Perdition',
     ImageClass: 'biere-de-garde',
     Odds: 0.73
   },
@@ -493,7 +493,7 @@ export default
   {
     Chances: 1,
     Style: 'Fruit Lambic',
-    Example: 'Boon Oude Kriek',
+    Example: 'Cantillon Kriek',
     ImageClass: 'fruit-lambic',
     Odds: 0.36
   },
@@ -517,5 +517,12 @@ export default
     Example: 'Fuller’s 1845',
     ImageClass: 'british-strong-ale',
     Odds: 0.36
-  }
+  },
+  {
+    Chances: 1,
+    Style: 'Trappist Single',
+    Example: 'Achel 5° Blond',
+    ImageClass: 'trappist-single',
+    Odds: 0.36
+  },
 ];
