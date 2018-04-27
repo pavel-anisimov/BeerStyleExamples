@@ -1,0 +1,67 @@
+/**
+ * @file body.scss
+ * @description Main css class
+ * @author Pavel Anisimov
+ * @copyright Pavel Anisimov 2017-2018
+ */
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.5em
+}
+
+.container {
+  width: 100%;
+  margin-top: 50px
+}
+
+.image, .question, .answer {
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  max-width: 100%;
+  margin: 10px auto 10px auto;
+  box-sizing: border-box
+}
+
+.question, .answer {
+  height: 70px
+}
+.image {
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain
+}
+
+.hidden {
+  display: none;
+  width: 0;
+  height: 0
+}
+
+.question {
+  background-color: #ccc;
+  > span {
+    font-weight: bolder
+  }
+}
+
+.answer {
+  color: #fff;
+  line-height: 60px;
+  background-color: #084694
+}
+
+.button {
+  cursor:pointer;
+  margin: 10px auto 10px auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  height: 30px;
+  width: 200px;
+  background-color: green;
+  color: #fff
+}
