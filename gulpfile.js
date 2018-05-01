@@ -27,7 +27,6 @@ const stringReplace = require('gulp-string-replace');
 
 // Current directory, name of the project.
 const TEMPLATE = process.cwd().split(path.sep).pop();
-const SUFFIX  = 'min';
 const INDEX_FILE  = 'index.html';
 const TEMP_FOLDER  = 'temp';
 const ENTRY_POINT = 'index.js'
@@ -149,7 +148,7 @@ gulp.task('minify-html', ['replace-assets'], () => {
 // Add new template html to main src folder
 gulp.task('release', ['minify-html'], () =>
   gulp.src(`${TEMP_FOLDER}/${INDEX_FILE}`)
-    .pipe(rename(`${TEMPLATE}.${SUFFIX}.html`))
+    .pipe(rename(`${TEMPLATE}.html`))
     .pipe(gulp.dest('./dist'))
 );
 
