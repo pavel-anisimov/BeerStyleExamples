@@ -65,3 +65,17 @@ body {
   background-color: green;
   color: #fff
 }
+
+.switch {
+  .option {
+    display: none;
+    &.selected {
+      display: inline-block;
+    }
+  }
+  width: 100px;
+  padding: 10px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ccc
+}

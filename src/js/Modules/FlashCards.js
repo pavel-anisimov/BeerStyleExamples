@@ -4,11 +4,15 @@
  * @author Pavel Anisimov
  * @copyright Pavel Anisimov 2017-2018
  */
-import Answer from './Answer';
-import Question from './Question';
-import Image from './Image';
-import Button from './Button';
-import { GetRandomStyle } from './Helpers';
+import Answer from '../Components/Answer';
+import Question from '../Components/Question';
+import Image from '../Components/Image';
+import Button from '../Components/Button';
+import Switch from '../Components/Switch';
+import Collection from './Collection';
+import Styles from '../Data/StylesData';
+
+import { GetRandomStyle, GetSortedStyles } from './Helpers';
 
 /**
  * @class FlashCards
@@ -24,8 +28,12 @@ export default class FlashCards {
     this.question = new Question();
     this.image = new Image();
     this.button = new Button();
+    this.switch = new Switch();
     this.setState('');
+    this.styles = new Collection(Styles);
     this.currentStyle = this.getStyle();
+
+    window.flashcards = this;
   }
 
   /**
@@ -82,8 +90,11 @@ export default class FlashCards {
    * @return {FlashCards}
    */
   setStyle() {
-    this.currentStyle = GetRandomStyle();
-    return this;
+    if (this.switch.isMode('Random')) {
+      this.currentStyle = this.styles.getRandom();
+    } else if (this.switch.isMode('Ordered')) {
+      this.currentStyle = this.styles.getNext();
+    }
   }
 
   /**

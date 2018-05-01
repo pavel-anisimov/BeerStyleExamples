@@ -9,7 +9,7 @@ export default
 [
   {
     Chances: 11,
-    StyleId: '6A',
+    Id: '06A',
     Style: 'Märzen',
     Example: 'Paulaner Oktoberfest',
     ImageClass: 'marzen',
@@ -17,7 +17,7 @@ export default
   },
   {
     Chances: 9,
-    StyleId: '17C',
+    Id: '17C',
     Style: 'Wee Heavy',
     Example: 'Belhaven Wee Heavy',
     ImageClass: 'wee-heavy',
@@ -25,7 +25,7 @@ export default
   },
   {
     Chances: 9,
-    StyleId: '16D',
+    Id: '16D',
     Style: 'Foreign Extra Stout',
     Example: 'Guinness Foreign Extra Stout',
     ImageClass: 'foreign-extra-stout',
@@ -33,7 +33,7 @@ export default
   },
   {
     Chances: 8,
-    StyleId: '20B',
+    Id: '20B',
     Style: 'American Stout',
     Example: 'Sierra Nevada Stout',
     ImageClass: 'american-stout',
@@ -41,7 +41,7 @@ export default
   },
   {
     Chances: 8,
-    StyleId: '15B',
+    Id: '15B',
     Style: 'Irish Stout',
     Example: 'Guinness Draught',
     ImageClass: 'irish-stout',
@@ -49,7 +49,7 @@ export default
   },
   {
     Chances: 7,
-    StyleId: '6C',
+    Id: '06C',
     Style: 'Dunkles Bock',
     Example: 'Aass Bock',
     ImageClass: 'dunkles-bock',
@@ -57,7 +57,7 @@ export default
   },
   {
     Chances: 7,
-    StyleId: '20A',
+    Id: '20A',
     Style: 'American Porter',
     Example: 'Sierra Nevada Porter',
     ImageClass: 'american-porter',
@@ -65,7 +65,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '5D',
+    Id: '05D',
     Style: 'German Pils',
     Example: 'Trumer Pils',
     ImageClass: 'german-pils',
@@ -73,7 +73,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '4A',
+    Id: '04A',
     Style: 'Munich Helles',
     Example: 'Spaten Premium Lager',
     ImageClass: 'munich-helles',
@@ -81,7 +81,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '2B',
+    Id: '02B',
     Style: 'International Amber Lager',
     Example: 'Dos Equis Amber',
     ImageClass: 'international-amber-lager',
@@ -89,7 +89,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '14A',
+    Id: '14A',
     Style: 'Scottish Ligh',
     Example: 'McEwan’s 60/-',
     ImageClass: 'scottish-light',
@@ -97,7 +97,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '18B',
+    Id: '18B',
     Style: 'American Pale Ale',
     Example: 'Sierra Nevada Pale Ale',
     ImageClass: 'american-pale-ale',
@@ -105,7 +105,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '23D',
+    Id: '23D',
     Style: 'Lambic',
     Example: 'Cantillon Grand Cru Bruocsella',
     ImageClass: 'lambic',
@@ -113,7 +113,7 @@ export default
   },
   {
     Chances: 6,
-    StyleId: '17D',
+    Id: '17D',
     Style: 'English Barleywine',
     Example: 'Fuller’s Golden Pride',
     ImageClass: 'english-barleywine',
@@ -121,7 +121,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '8A',
+    Id: '08A',
     Style: 'Munich Dunkel',
     Example: 'Chuckanut Dunkel Lager',
     ImageClass: 'munich-dunkel',
@@ -129,7 +129,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '11B',
+    Id: '11B',
     Style: 'Best Bitter',
     Example: 'Fuller’s London Pride',
     ImageClass: 'best-bitter',
@@ -137,7 +137,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '22C',
+    Id: '22C',
     Style: 'American Barleywine',
     Example: 'Sierra Nevada Big Foot',
     ImageClass: 'american-barleywine',
@@ -145,7 +145,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '16A',
+    Id: '16A',
     Style: 'Sweet Stout',
     Example: 'Samuel Adams Cream Stout',
     ImageClass: 'sweet-stout',
@@ -153,7 +153,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '14B',
+    Id: '14B',
     Style: 'Scottish Heavy',
     Example: 'McEwan’s 70/-',
     ImageClass: 'scottish-heavy',
@@ -161,7 +161,7 @@ export default
   },
   {
     Chances: 5,
-    StyleId: '10A',
+    Id: '10A',
     Style: 'Weissbier',
     Example: 'Ayinger Bräu Weisse',
     ImageClass: 'weissbier',
@@ -169,7 +169,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '7B',
+    Id: '07B',
     Style: 'Altbier',
     Example: 'Schumacher Alt',
     ImageClass: 'altbier',
@@ -177,7 +177,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '19B',
+    Id: '19B',
     Style: 'California Common',
     Example: 'Anchor Steam',
     ImageClass: 'california-common',
@@ -185,7 +185,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '1D',
+    Id: '01D',
     Style: 'American Wheat Example',
     Example: 'Widmer Hefeweizen',
     ImageClass: 'american-wheat',
@@ -193,7 +193,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '4C',
+    Id: '04C',
     Style: 'Helles Bock',
     Example: 'Ayinger Maibock',
     ImageClass: 'helles-bock',
@@ -201,7 +201,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '8B',
+    Id: '08B',
     Style: 'Schwarzbier',
     Example: 'Einbecker Schwarzbier',
     ImageClass: 'schwarzbier',
@@ -209,7 +209,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '22A',
+    Id: '22A',
     Style: 'Double IPA',
     Example: 'Russian River Pliny the Elder',
     ImageClass: 'american-dipa',
@@ -217,7 +217,7 @@ export default
   },
   {
     Chances: 4,
-    StyleId: '9A',
+    Id: '09A',
     Style: 'Doppelbock',
     Example: 'Ayinger Celebrator',
     ImageClass: 'doppelbock',
@@ -225,7 +225,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '24A',
+    Id: '24A',
     Style: 'Witbier',
     Example: 'Allagash White',
     ImageClass: 'witbier',
@@ -233,7 +233,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '24B',
+    Id: '24B',
     Style: 'Belgian Pale Ale',
     Example: 'De Koninck',
     ImageClass: 'belgian-pale-ale',
@@ -241,7 +241,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '25A',
+    Id: '25A',
     Style: 'Belgian Blond Ale',
     Example: 'La Trappe Blond',
     ImageClass: 'belgian-blond-ale',
@@ -249,7 +249,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '14C',
+    Id: '14C',
     Style: 'Scottish Export',
     Example: 'Belhaven Scottish Ale',
     ImageClass: 'scottish-export',
@@ -257,7 +257,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '20C',
+    Id: '20C',
     Style: 'Imperial Stout',
     Example: 'Sierra Nevada Narwhal Imperial Stout',
     ImageClass: 'imperial-stout',
@@ -265,7 +265,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '1C',
+    Id: '01C',
     Style: 'Cream Ale',
     Example: 'Old Style',
     ImageClass: 'cream-ale',
@@ -273,7 +273,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '10C',
+    Id: '10C',
     Style: 'Weizenbock',
     Example: 'Eisenbahn Weizenbock',
     ImageClass: 'weizenbock',
@@ -281,7 +281,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '15A',
+    Id: '15A',
     Style: 'Irish Red Ale',
     Example: 'Samuel Adams Irish Red',
     ImageClass: 'irish-red-ale',
@@ -289,7 +289,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '23A',
+    Id: '23A',
     Style: 'Berliner Weisse',
     Example: 'The Bruery Hottenroth',
     ImageClass: 'berliner-weisser',
@@ -297,7 +297,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '19C',
+    Id: '19C',
     Style: 'American Brown Ale',
     Example: 'Anchor Brekle’s Brown',
     ImageClass: 'american-brown-ale',
@@ -305,7 +305,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '11A',
+    Id: '11A',
     Style: 'Ordinary Bitter',
     Example: 'Young’s Bitter',
     ImageClass: 'ordinary-bitter',
@@ -313,7 +313,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '13C',
+    Id: '13C',
     Style: 'English Porter',
     Example: 'Fuller’s London Porter',
     ImageClass: 'english-porter',
@@ -321,7 +321,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '1B',
+    Id: '01B',
     Style: 'American Lager',
     Example: 'Budweiser',
     ImageClass: 'american-lager',
@@ -329,7 +329,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '17B',
+    Id: '17B',
     Style: 'Old Ale',
     Example: 'Greene King Strong Suffolk Ale',
     ImageClass: 'old-ale',
@@ -337,7 +337,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '13A',
+    Id: '13A',
     Style: 'Dark Mild',
     Example: 'Brain’s Dark',
     ImageClass: 'dark-mild',
@@ -345,7 +345,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '26C',
+    Id: '26C',
     Style: 'Belgian Tripel',
     Example: 'La Trappe Tripel',
     ImageClass: 'belgian-tripel',
@@ -353,7 +353,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '7A',
+    Id: '07A',
     Style: 'Vienna Lager',
     Example: 'Chuckanut Vienna Lager',
     ImageClass: 'vienna-lager',
@@ -361,7 +361,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '9B',
+    Id: '09B',
     Style: 'Eisbock',
     Example: 'Kulmbacher Eisbock',
     ImageClass: 'eisbock',
@@ -369,7 +369,7 @@ export default
   },
   {
     Chances: 3,
-    StyleId: '26D',
+    Id: '26D',
     Style: 'Belgian Dark Strong Ale',
     Example: 'Achel Extra Brune',
     ImageClass: 'belgian-dark-strong-ale',
@@ -377,7 +377,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '3B',
+    Id: '03B',
     Style: 'Czech Premium Pale Lager',
     Example: 'Gambrinus Premium',
     ImageClass: 'czech-premium-pale-lager',
@@ -385,7 +385,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '19A',
+    Id: '19A',
     Style: 'American Amber Ale',
     Example: 'Rogue American Amber Ale',
     ImageClass: 'american-amber-ale',
@@ -393,7 +393,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '3A',
+    Id: '03A',
     Style: 'Czech Pale Lager',
     Example: 'Notch Session Pils',
     ImageClass: 'czech-pale-lager',
@@ -401,7 +401,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '11C',
+    Id: '11C',
     Style: 'Strong Bitter',
     Example: 'Bass Ale',
     ImageClass: 'strong-bitter',
@@ -409,7 +409,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '13B',
+    Id: '13B',
     Style: 'British Brown Ale',
     Example: 'Newcastle Brown Ale',
     ImageClass: 'british-brown-ale',
@@ -417,7 +417,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '2A',
+    Id: '02A',
     Style: 'International Pale Lager',
     Example: 'Corona Extra',
     ImageClass: 'international-pale-lager',
@@ -425,7 +425,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '26B',
+    Id: '26B',
     Style: 'Belgian Dubbel',
     Example: 'Chimay Première',
     ImageClass: 'belgian-dubbel',
@@ -433,7 +433,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '23E',
+    Id: '23E',
     Style: 'Gueuze',
     Example: 'Cantillon Gueuze',
     ImageClass: 'gueuze',
@@ -441,7 +441,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '9C',
+    Id: '09C',
     Style: 'Baltic Porter',
     Example: 'Baltika #6 Porter',
     ImageClass: 'baltic-porter',
@@ -449,7 +449,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '23B',
+    Id: '23B',
     Style: 'Flanders Red Ale',
     Example: 'Duchesse de Bourgogne',
     ImageClass: 'flanders-red-ale',
@@ -457,7 +457,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '25B',
+    Id: '25B',
     Style: 'Saison',
     Example: 'Fantôme Saison',
     ImageClass: 'saison',
@@ -465,7 +465,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '1A',
+    Id: '01A',
     Style: 'American Light Lager',
     Example: 'Bud Light',
     ImageClass: 'american-light-lager',
@@ -473,7 +473,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '5B',
+    Id: '05B',
     Style: 'Kölsch',
     Example: 'Früh Kölsch',
     ImageClass: 'kolsch',
@@ -481,7 +481,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '21A',
+    Id: '21A',
     Style: 'American IPA',
     Example: 'Russian River Blind Pig',
     ImageClass: 'american-ipa',
@@ -489,7 +489,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '16B',
+    Id: '16B',
     Style: 'Oatmeal Stout',
     Example: 'Samuel Smith Oatmeal Stout',
     ImageClass: 'oatmeal-stout',
@@ -497,7 +497,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '25C',
+    Id: '25C',
     Style: 'Belgian Golden Strong Ale',
     Example: 'Duvel',
     ImageClass: 'belgian-golden-strong-ale',
@@ -505,7 +505,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '24C',
+    Id: '24C',
     Style: 'Bière de Garde',
     Example: 'Russian River Perdition',
     ImageClass: 'biere-de-garde',
@@ -513,7 +513,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '3C',
+    Id: '03C',
     Style: 'Czech Amber Lager',
     Example: 'Pivovar Vysoký Chlumec Démon',
     ImageClass: 'czech-amber-lager',
@@ -521,7 +521,7 @@ export default
   },
   {
     Chances: 2,
-    StyleId: '12A',
+    Id: '12A',
     Style: 'British Golden Ale',
     Example: 'Fuller’s Discovery',
     ImageClass: 'british-golden-ale',
@@ -529,7 +529,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '12C',
+    Id: '12C',
     Style: 'English IPA',
     Example: 'Samuel Smith IPA',
     ImageClass: 'english-ipa',
@@ -537,7 +537,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '12B',
+    Id: '12B',
     Style: 'Australian Sparkling Ale',
     Example: 'Coopers Sparkling Ale',
     ImageClass: 'australian-sparkling-ale',
@@ -545,7 +545,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '22D',
+    Id: '22D',
     Style: 'Wheatwine',
     Example: 'Rubicon Winter Wheat Wine',
     ImageClass: 'wheatwine',
@@ -553,7 +553,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '15C',
+    Id: '15C',
     Style: 'Irish Extra Stout',
     Example: 'Guinness Extra Stout',
     ImageClass: 'irish-extra-stout',
@@ -561,7 +561,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '23F',
+    Id: '23F',
     Style: 'Fruit Lambic',
     Example: 'Cantillon Kriek',
     ImageClass: 'fruit-lambic',
@@ -569,7 +569,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '16C',
+    Id: '16C',
     Style: 'Tropical Stout',
     Example: 'Jamaican Stout',
     ImageClass: 'tropical-stout',
@@ -577,7 +577,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '23C',
+    Id: '23C',
     Style: 'Oud Bruin',
     Example: 'Petrus Oud Bruin',
     ImageClass: 'oud-bruin',
@@ -585,7 +585,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '17A',
+    Id: '17A',
     Style: 'British Strong Ale',
     Example: 'Fuller’s 1845',
     ImageClass: 'british-strong-ale',
@@ -593,7 +593,7 @@ export default
   },
   {
     Chances: 1,
-    StyleId: '26A',
+    Id: '26A',
     Style: 'Trappist Single',
     Example: 'Achel 5° Blond',
     ImageClass: 'trappist-single',

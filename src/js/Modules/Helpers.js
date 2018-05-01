@@ -4,7 +4,7 @@
  * @author Pavel Anisimov
  * @copyright Pavel Anisimov 2017-2018
  */
-import Styles from './Styles';
+import Styles from '../Data/StylesData';
 
 /**
  * @function randomFrommArray
@@ -21,4 +21,6 @@ const randomFrommArray = arr => arr[Math.floor(Math.random() * arr.length)];
  */
 const GetRandomStyle = () => randomFrommArray(Styles);
 
-export { GetRandomStyle };
+const NextArrayIndex = (length, currentIndex) => (++currentIndex === length) ? 0 : currentIndex;
+
+export { GetRandomStyle, NextArrayIndex };
