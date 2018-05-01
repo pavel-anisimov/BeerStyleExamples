@@ -19,7 +19,7 @@ export default class Collection {
   constructor(data){
     this.data = data;
     this.sort();
-    this.index = this.getLength() - 1;
+    this.index = this.count() - 1;
   }
 
   /**
