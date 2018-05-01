@@ -27,6 +27,7 @@ body {
 .question, .answer {
   height: 70px
 }
+
 .image {
   height: 300px;
   width: 300px;
@@ -55,8 +56,8 @@ body {
 }
 
 .button {
-  cursor:pointer;
-  margin: 10px auto 10px auto;
+  cursor: pointer;
+  margin: 10px auto 10px 10px;
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -67,15 +68,20 @@ body {
 }
 
 .switch {
-  .option {
-    display: none;
-    &.selected {
-      display: inline-block;
-    }
-  }
-  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 10px 10px auto;
+  width: 90px;
   padding: 10px;
   height: 30px;
   border-radius: 10px;
-  background-color: #ccc
+  background-color: orange
 }
+
+.row {
+  width: 100%;
+  > div {
+    display: inline-block;
+  }
+}
+

@@ -32,8 +32,6 @@ export default class FlashCards {
     this.setState('');
     this.styles = new Collection(Styles);
     this.currentStyle = this.getStyle();
-
-    window.flashcards = this;
   }
 
   /**

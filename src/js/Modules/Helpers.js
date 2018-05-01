@@ -12,15 +12,13 @@ import Styles from '../Data/StylesData';
  * @param {Array} arr - array of objects
  * @return {Object} - random element
  */
-const randomFrommArray = arr => arr[Math.floor(Math.random() * arr.length)];
+const RandomFrommArray = arr => arr[Math.floor(Math.random() * arr.length)];
 
 /**
  * @function GetRandomStyle
  * @description Exported method for generating a random single style.
  * @return {Object} random style
  */
-const GetRandomStyle = () => randomFrommArray(Styles);
-
 const NextArrayIndex = (length, currentIndex) => (++currentIndex === length) ? 0 : currentIndex;
 
-export { GetRandomStyle, NextArrayIndex };
+export { RandomFrommArray, NextArrayIndex };
