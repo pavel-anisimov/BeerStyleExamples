@@ -36,6 +36,7 @@ export default class Button extends HtmlElement {
    * @method this
    * @description Wrapper method for disabling an object by adding 'disabled' event
    * @return {Button}
+   */
   disable() {
     this.dom().classList.add('disabled');
     return this;
