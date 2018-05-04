@@ -8,11 +8,20 @@ import Answer from '../Components/Answer';
 import Question from '../Components/Question';
 import Image from '../Components/Image';
 import Button from '../Components/Button';
+import AddButton from '../Components/AddButton';
+import RemoveButton from '../Components/RemoveButton';
 import Switch from '../Components/Switch';
 import Collection from './Collection';
 import Styles from '../Data/StylesData';
 
-import { GetRandomStyle, GetSortedStyles } from './Helpers';
+import {
+  GetRandomStyle,
+  GetSortedStyles,
+  ArrayFromLocalStorage,
+  AppendLocalStorage,
+  RemoveLocalStorage,
+  ArrayToLocalStorage,
+} from './Helpers';
 
 /**
  * @class FlashCards
@@ -28,10 +37,18 @@ export default class FlashCards {
     this.question = new Question();
     this.image = new Image();
     this.button = new Button();
+    this.addButton = new AddButton();
+    this.removeButton = new RemoveButton();
+
     this.switch = new Switch();
     this.setState('');
     this.styles = new Collection(Styles);
     this.currentStyle = this.getStyle();
+
+    let hardStyles = Styles.filter(style => ArrayFromLocalStorage('hardStyles').indexOf(style.Id) > -1);
+    this.hardStyles = new Collection(hardStyles);
+
+    window.flashcards = this;
   }
 
   /**
@@ -40,6 +57,9 @@ export default class FlashCards {
    */
   init() {
     this.button.onClick(this.logic.bind(this));
+    this.addButton.onClick(this.saveHardStyle.bind(this));
+    this.removeButton.onClick(this.removeHardStyle.bind(this));
+    this.removeButton.disable();
   }
 
   /**
@@ -61,6 +81,30 @@ export default class FlashCards {
       this.button.setLabel(':: Show Answer ::');
       this.image.hide().setImage(this.getStyle('ImageClass'));
     }
+  }
+
+  /**
+   * @method saveHardStyle
+   * @description Adding a style to a hard stile list
+   * @return {FlashCards}
+   */
+  saveHardStyle() {
+    this.hardStyles.insert(this.getStyle());
+    AppendLocalStorage('hardStyles', this.getStyle('Id'));
+
+    return this;
+  }
+
+  /**
+   * @method removeHardStyle
+   * @description Removing a style from a hard stile list
+   * @return {FlashCards}
+   */
+  removeHardStyle() {
+    this.hardStyles.remove(this.getStyle('Id'));
+    RemoveLocalStorage('hardStyles', this.getStyle('Id'));
+
+    return this;
   }
 
   /**
@@ -88,10 +132,18 @@ export default class FlashCards {
    * @return {FlashCards}
    */
   setStyle() {
-    if (this.switch.isMode('Random')) {
-      this.currentStyle = this.styles.getRandom();
-    } else if (this.switch.isMode('Ordered')) {
-      this.currentStyle = this.styles.getNext();
+    switch (this.switch.getMode()) {
+      case 'Random':
+        this.currentStyle = this.styles.getRandom();
+        break;
+      case 'Ordered':
+        this.currentStyle = this.styles.getNext();
+        break;
+      case 'Saved':
+        this.currentStyle = this.hardStyles.getRandom();
+        break;
+      default:
+        break;
     }
   }
 

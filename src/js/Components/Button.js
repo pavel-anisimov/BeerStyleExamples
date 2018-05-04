@@ -31,4 +31,23 @@ export default class Button extends HtmlElement {
     this.dom().addEventListener('click', cb);
     return this;
   }
+
+  /**
+   * @method this
+   * @description Wrapper method for disabling an object by adding 'disabled' event
+   * @return {Button}
+  disable() {
+    this.dom().classList.add('disabled');
+    return this;
+  }
+
+  /**
+   * @method enable
+   * @description Wrapper method for enabling an object by removing 'disabled' event
+   * @return {Button} - HTML Object
+   */
+  enable() {
+    this.dom().classList.remove('disabled');
+    return this;
+  }
 }

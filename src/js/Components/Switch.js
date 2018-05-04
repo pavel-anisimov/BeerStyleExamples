@@ -20,7 +20,7 @@ export default class Switch extends HtmlElement {
    */
   constructor(idSelector = 'switch') {
     super(idSelector);
-    this.options = ['Random', 'Ordered'];
+    this.options = ['Random', 'Ordered', 'Saved'];
     this.setCurrentOption();
     this.onClick();
   }
@@ -84,6 +84,14 @@ export default class Switch extends HtmlElement {
   switchOptions() {
     const nextOption = NextArrayIndex(this.options.length, this.getCurrentOption()) ;
     this.setCurrentOption(nextOption);
+
+    if(this.isMode('Random') || this.isMode('Ordered')) {
+      flashcards.addButton.enable();
+      flashcards.removeButton.disable();
+    } else if (this.isMode('Saved')) {
+      flashcards.addButton.disable();
+      flashcards.removeButton.enable();
+    }
     return nextOption;
   }
 

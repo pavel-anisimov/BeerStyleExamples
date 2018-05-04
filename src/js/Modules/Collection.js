@@ -16,7 +16,7 @@ export default class Collection {
    * @description Collection Constructor
    * @param {Array} data
    */
-  constructor(data){
+  constructor(data = []){
     this.data = data;
     this.sort();
     this.index = this.count() - 1;
@@ -29,6 +29,30 @@ export default class Collection {
    */
   count() {
     return this.data.length;
+  }
+
+  /**
+   * @method insert
+   * @description inserts an object to a Collection
+   * @param {Object} entry
+   * @return {Collection}
+   */
+  insert(entry){
+    this.data.push(entry);
+    this.sort();
+
+    return this;
+  }
+
+  /**
+   * @method remove
+   * @description Removes an object from a collection
+   * @param {String} id
+   * @return {Collection}
+   */
+  remove(id) {
+    this.data = this.data.filter(style => style.Id !== id);
+    return this;
   }
 
   /**
@@ -66,7 +90,7 @@ export default class Collection {
    * @method getCurrent
    * @description returning an element at the specific index
    * @param {Number} index - optional. Defaults to current index
-   * @return {JSON}
+   * @return {Object}
    */
   getCurrent(index = this.getIndex()) {
     return this.data[index];
@@ -75,7 +99,7 @@ export default class Collection {
   /**
    * @method getNext
    * @description returning next element and setting index for next
-   * @return {JSON}
+   * @return {Object}
    */
   getNext() {
     let index = NextArrayIndex(this.count(), this.getIndex());
@@ -86,11 +110,20 @@ export default class Collection {
   /**
    * @method getRandom
    * @description returning random element and setting index for that element
-   * @return {JSON}
+   * @return {Object}
    */
   getRandom() {
     const index = Math.floor(Math.random() * this.count());
     this.setIndex(index);
     return this.getCurrent(index);
+  }
+
+  /**
+   * @method getRandom
+   * @description returning an array of only id's
+   * @return {Array}
+   */
+  getComaSeparatedKeys() {
+    return this.data.map(s => s.Id);
   }
 }

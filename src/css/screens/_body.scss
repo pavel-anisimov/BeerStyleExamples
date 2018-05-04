@@ -33,7 +33,36 @@ body {
   width: 300px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain
+  background-size: contain;
+  position: relative;
+
+  > .add-button, > .remove-button {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 0px;
+
+    &.disabled {
+      opacity: 0.15;
+      pointer-events: none;
+    }
+  }
+
+  > .add-button {
+    background-color: green;
+    right: 0px;
+  }
+
+  > .remove-button {
+    background-color: red;
+    left: 0px;
+  }
 }
 
 .hidden {
@@ -84,4 +113,3 @@ body {
     display: inline-block;
   }
 }
-
