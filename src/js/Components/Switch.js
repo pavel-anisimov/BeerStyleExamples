@@ -5,7 +5,10 @@
  * @copyright Pavel Anisimov 2017-2018
  */
 import HtmlElement from './HtmlObject';
-import { NextArrayIndex } from '../Modules/Helpers';
+import {
+  NextArrayIndex,
+  ArrayFromLocalStorage,
+} from '../Modules/Helpers';
 
 /**
  * Switch Object
@@ -20,9 +23,48 @@ export default class Switch extends HtmlElement {
    */
   constructor(idSelector = 'switch') {
     super(idSelector);
-    this.options = ['Random', 'Ordered', 'Saved'];
+    this.options = ['Random', 'Ordered'];
+
+    this.init();
+  }
+
+  /**
+   * @method init
+   * @description binding the app logic to the switch.
+   */
+  init() {
     this.setCurrentOption();
     this.onClick();
+    if (ArrayFromLocalStorage('hardStyles').length) {
+      this.addMode('Saved');
+    }
+  }
+
+  /**
+   * @method addMode
+   * @description Adding a mode to the list
+   * @param {String} mode
+   * @return {Switch}
+   */
+  addMode(mode) {
+    this.options.push(mode);
+
+    return this;
+  }
+
+  /**
+   * @method removeMode
+   * @description Removing a mode from the list
+   * @param {String} mode
+   * @return {Switch}
+   */
+  removeMode(mode) {
+    const index = this.options.indexOf(mode);
+
+    if(index > -1) {
+      this.options.splice(index, 1);
+    }
+    return this;
   }
 
   /**

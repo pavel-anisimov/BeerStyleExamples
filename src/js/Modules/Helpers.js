@@ -43,7 +43,8 @@ const AppendLocalStorage = (key, val) => {
     return void(0);
   }
   const array = localStorage[key].split(',');
-  if(!(val in array)) {
+
+  if(!array.includes(val)) {
     array.push(val);
     localStorage[key] = array.join(',');
   }
@@ -59,7 +60,7 @@ const RemoveLocalStorage = (key, val) => {
   const array = localStorage[key].split(',');
   const index = array.indexOf(val);
 
-  if(val in index) {
+  if(array.includes(val)) {
     array.splice(index, 1);
     localStorage[key] = array.join(',');
   }

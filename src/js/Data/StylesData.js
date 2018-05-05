@@ -1,5 +1,5 @@
 /**
- * @file Styles.js
+ * @file StylesData.js
  * @description Json object with all styles and classic examples
  * @author Pavel Anisimov
  * @copyright Pavel Anisimov 2017-2018

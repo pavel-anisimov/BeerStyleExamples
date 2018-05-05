@@ -20,7 +20,6 @@ import {
   ArrayFromLocalStorage,
   AppendLocalStorage,
   RemoveLocalStorage,
-  ArrayToLocalStorage,
 } from './Helpers';
 
 /**
@@ -46,6 +45,7 @@ export default class FlashCards {
     this.currentStyle = this.getStyle();
 
     let hardStyles = Styles.filter(style => ArrayFromLocalStorage('hardStyles').indexOf(style.Id) > -1);
+
     this.hardStyles = new Collection(hardStyles);
 
     window.flashcards = this;
@@ -57,9 +57,28 @@ export default class FlashCards {
    */
   init() {
     this.button.onClick(this.logic.bind(this));
-    this.addButton.onClick(this.saveHardStyle.bind(this));
+    this.addButton.onClick(this.addHardStyle.bind(this));
     this.removeButton.onClick(this.removeHardStyle.bind(this));
     this.removeButton.disable();
+  }
+
+  /**
+   * @method setUpButtons
+   * @description Logic to switch disability of buttons
+   * @return {FlashCards}
+   */
+  setUpButtons() {
+    if(this.switch.isMode('Random') || this.switch.isMode('Ordered')) {
+      if(!ArrayFromLocalStorage().includes(this.getStyle('Id'))) {
+        flashcards.addButton.enable();
+      }
+      flashcards.removeButton.disable();
+    } else if (this.switch.isMode('Saved')) {
+      flashcards.addButton.disable();
+      flashcards.removeButton.enable();
+    }
+
+    return this;
   }
 
   /**
@@ -72,6 +91,7 @@ export default class FlashCards {
       this.button.setLabel(':: Next Question ::');
       this.answer.setLabel(this.getStyle('Example'));
       this.image.show();
+      this.setUpButtons();
     } else {
       this.setState('question');
       this.image.removeImage(this.getStyle('ImageClass'));
@@ -84,13 +104,18 @@ export default class FlashCards {
   }
 
   /**
-   * @method saveHardStyle
+   * @method addHardStyle
    * @description Adding a style to a hard stile list
    * @return {FlashCards}
    */
-  saveHardStyle() {
+  addHardStyle() {
     this.hardStyles.insert(this.getStyle());
     AppendLocalStorage('hardStyles', this.getStyle('Id'));
+    this.addButton.disable();
+
+    if (this.hardStyles.count()) {
+      this.switch.addMode('Saved');
+    }
 
     return this;
   }
@@ -103,6 +128,11 @@ export default class FlashCards {
   removeHardStyle() {
     this.hardStyles.remove(this.getStyle('Id'));
     RemoveLocalStorage('hardStyles', this.getStyle('Id'));
+    this.removeButton.disable();
+
+    if (!this.hardStyles.count()) {
+      this.switch.removeMode('Saved').switchOptions();
+    }
 
     return this;
   }
