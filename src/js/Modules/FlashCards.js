@@ -113,7 +113,7 @@ export default class FlashCards {
     AppendLocalStorage('hardStyles', this.getStyle('Id'));
     this.addButton.disable();
 
-    if (!this.hardStyles.count()) {
+    if (this.hardStyles.count() && !this.switch.hasMode('Saved')) {
       this.switch.addMode('Saved');
     }
 
@@ -132,7 +132,7 @@ export default class FlashCards {
       this.removeButton.disable();
       resolve(true);
     }).then(() => {
-      if (this.hardStyles.count() === 0) {
+      if (!this.hardStyles.count() && this.switch.hasMode('Saved')) {
         this.switch.switchOptions();
         this.switch.removeMode('Saved');
       }
