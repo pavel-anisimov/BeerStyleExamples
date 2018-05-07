@@ -35,7 +35,7 @@ export default class Switch extends HtmlElement {
   init() {
     this.setCurrentOption();
     this.onClick();
-    if (ArrayFromLocalStorage('hardStyles').length) {
+    if (ArrayFromLocalStorage('hardStyles').length && !this.hasMode('Saved')) {
       this.addMode('Saved');
     }
   }
@@ -50,6 +50,16 @@ export default class Switch extends HtmlElement {
     this.options.push(mode);
 
     return this;
+  }
+
+  /**
+   * @method hasMode
+   * @description Checking if mode is in the array
+   * @param {String} mode
+   * @return {Boolean}
+   */
+  hasMode(mode) {
+    return this.options.includes(mode);
   }
 
   /**

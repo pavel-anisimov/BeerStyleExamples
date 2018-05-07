@@ -4,7 +4,7 @@
  * @author Pavel Anisimov
  * @copyright Pavel Anisimov 2017-2018
  */
-import { NextArrayIndex } from '../Modules/Helpers'
+import { NextArrayIndex, ArrayFromLocalStorage } from '../Modules/Helpers'
 
 /**
  * @class Collection
@@ -29,6 +29,16 @@ export default class Collection {
    */
   count() {
     return this.data.length;
+  }
+
+  /**
+   * @method has
+   * @description checks if value already exists in the collection
+   * @param {String} value
+   * @return {Boolean}
+   */
+  has(value) {
+    return this.data.includes(value);
   }
 
   /**
@@ -102,9 +112,15 @@ export default class Collection {
    * @return {Object}
    */
   getNext() {
-    let index = NextArrayIndex(this.count(), this.getIndex());
+    const index = NextArrayIndex(this.count(), this.getIndex());
     this.setIndex(index);
-    return this.getCurrent(index);
+    const current = this.getCurrent(index);
+    if (!ArrayFromLocalStorage('hardStyles').includes(current.Id)) {
+      flashcards.addButton.disable();
+    } else {
+      flashcards.addButton.enable();
+    }
+    return current;
   }
 
   /**
@@ -115,7 +131,13 @@ export default class Collection {
   getRandom() {
     const index = Math.floor(Math.random() * this.count());
     this.setIndex(index);
-    return this.getCurrent(index);
+    const current = this.getCurrent(index);
+    if (!ArrayFromLocalStorage('hardStyles').includes(current.Id)) {
+      flashcards.addButton.disable();
+    } else {
+      flashcards.addButton.enable();
+    }
+    return current;
   }
 
   /**
